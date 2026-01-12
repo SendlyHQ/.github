@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://sendly.live/logo.svg" alt="Sendly" width="80" />
+  <img src="https://sendly.live/" alt="Sendly" width="80" />
 </p>
 
 <h1 align="center">Sendly</h1>
