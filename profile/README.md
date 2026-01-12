@@ -5,7 +5,7 @@
 <h1 align="center">Sendly</h1>
 
 <p align="center">
-  <strong>Simple, powerful SMS API for developers</strong>
+  <strong>The SMS API for developers</strong>
 </p>
 
 <p align="center">
@@ -18,71 +18,67 @@
 
 ## What is Sendly?
 
-Sendly is an SMS platform built for developers. Send text messages globally with a simple API, transparent pricing, and instant setup.
+Sendly is a developer-first SMS API with built-in compliance, OTP verification, and international reach. Send SMS to 50+ countries with a single API call.
 
 **Key Features:**
-- **Global Reach** — Send to 200+ countries
+- **Global Reach** — Send to 50+ countries
+- **Verify API** — Phone verification in 2 API calls
+- **Hosted Verification** — Stripe Checkout-style phone auth flow
+- **Compliance Built-in** — TCPA quiet hours, opt-out handling, SHAFT filtering
 - **Simple Pricing** — Pay-as-you-go credits, no monthly fees
-- **Developer-First** — SDKs for every major language
-- **Fast Setup** — Start sending in under 5 minutes
 - **Real-time Webhooks** — Delivery status updates instantly
 
 ## Official SDKs
 
 | Language | Package | Install |
 |----------|---------|---------|
-| **Node.js** | [@sendly/sdk](https://github.com/SendlyHQ/sendly-node) | `npm install @sendly/sdk` |
+| **Node.js** | [@sendly/node](https://github.com/SendlyHQ/sendly-node) | `npm install @sendly/node` |
 | **Python** | [sendly](https://github.com/SendlyHQ/sendly-python) | `pip install sendly` |
-| **Go** | [sendly-go](https://github.com/SendlyHQ/sendly-go) | `go get github.com/SendlyHQ/sendly-go` |
-| **Java** | [sendly](https://github.com/SendlyHQ/sendly-java) | Maven Central |
+| **Go** | [sendly-go](https://github.com/SendlyHQ/sendly-go) | `go get github.com/SendlyHQ/sendly-go/v3` |
+| **Java** | [sendly-java](https://github.com/SendlyHQ/sendly-java) | Maven Central |
 | **Rust** | [sendly](https://github.com/SendlyHQ/sendly-rust) | `cargo add sendly` |
 | **Ruby** | [sendly](https://github.com/SendlyHQ/sendly-ruby) | `gem install sendly` |
-| **PHP** | [sendly/sendly](https://github.com/SendlyHQ/sendly-php) | `composer require sendly/sendly-php` |
+| **PHP** | [sendly/sendly-php](https://github.com/SendlyHQ/sendly-php) | `composer require sendly/sendly-php` |
 | **.NET** | [Sendly](https://github.com/SendlyHQ/sendly-dotnet) | `dotnet add package Sendly` |
 | **CLI** | [@sendly/cli](https://github.com/SendlyHQ/sendly-cli) | `npm install -g @sendly/cli` |
 
 ## Quick Start
 
-```bash
-# Install
-npm install @sendly/sdk
-
-# Send a message
-import { Sendly } from '@sendly/sdk';
+```javascript
+import Sendly from '@sendly/node';
 
 const sendly = new Sendly('sk_live_v1_your_key');
 
+// Send SMS
 await sendly.messages.send({
   to: '+15551234567',
   text: 'Hello from Sendly!'
 });
+
+// Phone Verification
+await sendly.verify.send({ to: '+15551234567' });
+await sendly.verify.check({ phone: '+15551234567', code: '123456' });
 ```
 
 ## Pricing
 
 | Region | Cost |
 |--------|------|
-| US & Canada | 1 credit/SMS |
-| UK, India, Poland | 8 credits/SMS |
-| France, Japan, Australia | 12 credits/SMS |
-| Germany, Italy, Mexico | 16 credits/SMS |
+| US & Canada | 1 credit ($0.01) |
+| Tier 1 (UK, India, etc.) | 8 credits ($0.08) |
+| Tier 2 (France, Japan, etc.) | 12 credits ($0.12) |
+| Tier 3 (Germany, Italy, etc.) | 16 credits ($0.16) |
 
 **$10 = 1,000 credits** · No monthly fees · Credits never expire
 
 ## Resources
 
-- [API Reference](https://sendly.live/docs/api)
+- [API Reference](https://sendly.live/docs/api-reference)
 - [CLI Documentation](https://sendly.live/docs/cli)
-- [Webhook Events](https://sendly.live/docs/webhooks)
+- [Webhooks](https://sendly.live/docs/webhooks)
 - [Sandbox Testing](https://sendly.live/docs/sandbox)
 
 ## Support
 
 - **Email**: support@sendly.live
-- **Issues**: Open an issue in the relevant SDK repo
-
----
-
-<p align="center">
-  <sub>Built with care in San Francisco</sub>
-</p>
+- **Twitter**: [@sendly_live](https://twitter.com/sendly_live)
