@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://sendly.live/logo.svg" alt="Sendly" width="80" />
+  <img src="https://sendly.live/" alt="Sendly" width="80" />
 </p>
 
 <h1 align="center">Sendly</h1>
@@ -21,7 +21,7 @@
 Sendly is an SMS platform built for developers. Send text messages globally with a simple API, transparent pricing, and instant setup.
 
 **Key Features:**
-- **Global Reach** — Send to 200+ countries
+- **Global Reach** — Send to 50+ countries
 - **Simple Pricing** — Pay-as-you-go credits, no monthly fees
 - **Developer-First** — SDKs for every major language
 - **Fast Setup** — Start sending in under 5 minutes
