@@ -5,7 +5,7 @@
 <h1 align="center">Sendly</h1>
 
 <p align="center">
-  <strong>The SMS API for developers</strong>
+  <strong>The SMS & MMS API for developers</strong>
 </p>
 
 <p align="center">
@@ -18,12 +18,15 @@
 
 ## What is Sendly?
 
-Sendly is a developer-first SMS API with built-in compliance, OTP verification, and international reach. Send SMS to 50+ countries with a single API call.
+Sendly is a developer-first SMS and MMS API with built-in compliance, OTP verification, and international reach. Send messages to 190+ countries with a single API call.
 
 **Key Features:**
-- **Global Reach** — Send to 50+ countries
+- **Global Reach** — Send to 190+ countries
+- **SMS & MMS** — Text, images, and media
 - **Verify API** — Phone verification in 2 API calls
 - **Hosted Verification** — Stripe Checkout-style phone auth flow
+- **Teams & Enterprise** — Multi-workspace support with pooled credits
+- **Campaigns** — Bulk messaging with contact lists and personalization
 - **Compliance Built-in** — TCPA quiet hours, opt-out handling, SHAFT filtering
 - **Simple Pricing** — Pay-as-you-go credits, no monthly fees
 - **Real-time Webhooks** — Delivery status updates instantly
@@ -64,10 +67,12 @@ await sendly.verify.check({ phone: '+15551234567', code: '123456' });
 
 | Region | Cost |
 |--------|------|
-| US & Canada | 1 credit ($0.01) |
-| Tier 1 (UK, India, etc.) | 8 credits ($0.08) |
-| Tier 2 (France, Japan, etc.) | 12 credits ($0.12) |
-| Tier 3 (Germany, Italy, etc.) | 16 credits ($0.16) |
+| US & Canada | 2 credits ($0.02) |
+| Tier 1 (UK, AU, BR, etc.) | 8 credits ($0.08) |
+| Tier 2 (IN, FR, JP, etc.) | 12 credits ($0.12) |
+| Tier 3 (DE, NL, MX, etc.) | 16 credits ($0.16) |
+| Tier 4 (VN, SA, UA, etc.) | 24 credits ($0.24) |
+| Tier 5 (MY, EG, NG, etc.) | 48 credits ($0.48) |
 
 **$10 = 1,000 credits** · No monthly fees · Credits never expire
 
@@ -77,6 +82,7 @@ await sendly.verify.check({ phone: '+15551234567', code: '123456' });
 - [CLI Documentation](https://sendly.live/docs/cli)
 - [Webhooks](https://sendly.live/docs/webhooks)
 - [Sandbox Testing](https://sendly.live/docs/sandbox)
+- [Changelog](https://sendly.live/changelog)
 
 ## Support
 
