@@ -5,7 +5,7 @@
 <h1 align="center">Sendly</h1>
 
 <p align="center">
-  <strong>The SMS & MMS API for developers</strong>
+  <strong>The SMS API for developers & Agents</strong>
 </p>
 
 <p align="center">
